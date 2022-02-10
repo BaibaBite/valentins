@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentins</title>
+</head>
+<body>
+    <button onclick="valentins()">Spied mani</button>
+    <div id="pamats">
+        <div id="shadowBox">
+            <h1 id="teksts" class="rainbow rainbow_text_animated"></h1>
+        </div>
+        <div id="bilde"></div>
+    </div>
+
+    <script>
+        var datums=new Date();
+            diena=datums.getDate();
+            menesis=datums.getMonth()+1;
+            teksts=document.querySelector("#teksts");
+            bilde=document.getElementById("bilde");
+            s=14-diena;
+        
+        console.log(diena);
+        console.log(menesis);
+
+        function valentins(){
+            if (diena!=14){
+                teksts.innerHTML="Līdz Valentīna dienai jāgaida "+s+" dienas!";
+                console.log("meh");
+            }
+            else {
+
+                teksts.innerHTML="Valentīna diena bija pirms "+s+" dienām!";
+                console.log("uh");
+            }
+        
+        }
+
+setInterval(() => {
+    const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';//rgb value (0-255,0-255,0-255)
+    document.body.style.backgroundColor = rndCol;   
+}, 1000);
+
+
+
+
+    </script>
+
+</body>
+</html>
